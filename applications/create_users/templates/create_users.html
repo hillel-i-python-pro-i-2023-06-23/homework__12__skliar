@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <form method='GET'>
+        {% csrf_token %}
+        <label for="num_users">Сколько пользователей:</label>
+        <input type="number" name="num_users" id="num_users" min="0" required>
+        <button type="submit">Генерировать</button>
+    </form>
+
+    <ul>
+        {% for user in users_data %}
+            <li>{{ user }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -14,5 +14,7 @@ set -o nounset
 # [bash_init]-[END]
 
 
+echo "Executing command: $cmd"
+
 # shellcheck disable=SC2086
 exec $cmd

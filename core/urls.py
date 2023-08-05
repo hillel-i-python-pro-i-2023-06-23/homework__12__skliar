@@ -24,4 +24,5 @@ urlpatterns = [
     path("", include("applications.base.urls")),
     path("create-users/", include("applications.create_users.urls")),
     path("phoneuser/", include("applications.fill_contacts.urls")),
+    path("test/", include("applications.fill_contacts.urlsForListView"))
 ]

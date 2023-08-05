@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h1>Список пользователей c помощью ListView</h1>
+    <ul>
+        {% for user in object_list %}
+            <li>{{ user }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

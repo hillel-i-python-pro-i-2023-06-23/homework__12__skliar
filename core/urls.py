@@ -23,4 +23,5 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path("", include("applications.base.urls")),
     path("create-users/", include("applications.create_users.urls")),
+    path("phoneuser/", include("applications.fill_contacts.urls")),
 ]

@@ -48,7 +48,7 @@ DJANGO_APPS = [
 LOCAL_APPS = [
     "applications.base",
     "applications.create_users",
-    "applications.fill_contacts"
+    "applications.fill_contacts",
 ]
 
 THIRD_PARTY_APPS: List[list] = []
@@ -73,6 +73,7 @@ TEMPLATES = [
         "DIRS": [
             APPS_DIR / "templates",
             APPS_DIR / "create_users/templates",
+            APPS_DIR / "fill_contacts/templates",
         ],
         "APP_DIRS": True,
         "OPTIONS": {

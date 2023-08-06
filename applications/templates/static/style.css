@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "Montserrat"; /* Имя шрифта, которое будет использоваться в CSS */
-  src: url("static/fonts/Montserrat-VariableFont_wght.ttf") format("truetype"); /* Путь к файлу шрифта */
+  src: url("static/fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");/* Путь к файлу шрифта */
 }
 
 header {
@@ -28,6 +28,8 @@ body {
 }
 
 main {
+  margin-top: 20px;
+  text-align: center;
   flex: 1; /* Растягиваем основной контент (main) на всю доступную высоту */
 }
 
@@ -76,7 +78,6 @@ h2 {
   text-decoration: none;
 }
 
-
 .header__title {
   flex: 1;
 }
@@ -97,9 +98,31 @@ footer a {
 }
 
 footer a:hover {
-  color: #333;
+  opacity: 0.5;
 }
 
-img {
-  height: 36px;
+ul {
+  text-align: center;
+}
+
+ button {
+   width: 30%;
+   border: none;
+   background-color: #848988;
+   margin: 20px;
+   padding: 10px;
+   cursor: pointer;
+ }
+
+ input {
+   width: 30%;
+   margin: 20px;
+   padding: 10px;
+   border-color: #848988;
+ }
+ 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

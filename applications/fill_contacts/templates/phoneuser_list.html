@@ -1,7 +1,12 @@
 {% extends "index.html" %}
 
 {% block content %}
-    <a href="/test">text_List_view</a>
+    <a href="/phoneuser/test">test List view</a>
+    <a href="/phoneuser/all">all contacts</a>
+    <a href="#">add contact</a>
+    <a href="/phoneuser/one">view contact</a>
+    <a href="#">update contact</a>
+    <a href="#">delete contact</a>
 <h1>Список пользователей с помощью render</h1>
     <ul>
         {% for user in phoneusers %}

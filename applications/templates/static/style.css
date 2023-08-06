@@ -105,21 +105,20 @@ ul {
   text-align: center;
 }
 
- button {
-   width: 30%;
-   border: none;
-   background-color: #848988;
-   margin: 20px;
-   padding: 10px;
-   cursor: pointer;
- }
-
- input {
-   width: 30%;
-   margin: 20px;
-   padding: 10px;
-   border-color: #848988;
- }
+button {
+  width: 30%;
+  border: none;
+  background-color: #848988;
+  margin: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+input {
+  width: 30%;
+  margin: 20px;
+  padding: 10px;
+  border-color: #848988;
+}
  
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {

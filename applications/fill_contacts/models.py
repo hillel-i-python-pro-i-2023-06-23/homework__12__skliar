@@ -3,7 +3,7 @@ import uuid
 
 
 class PhoneUser(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     is_auto_generated = models.BooleanField(blank=False, default=False)
     name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=20)
@@ -12,7 +12,8 @@ class PhoneUser(models.Model):
 
     def __str__(self) -> str:
         return (
-            f"Имя {self.name} "
+            f"ID {self.id} "
+            f"|| Имя {self.name} "
             f"|| номер {self.phone_number} "
             f"|| дата создания {self.date_create} "
             f"|| дата изменения {self.date_update}"
@@ -20,5 +21,5 @@ class PhoneUser(models.Model):
 
     __repr__ = __str__
 
-    class Meta:
+    class Meta:   #для сортировки
         ordering = ["name"]

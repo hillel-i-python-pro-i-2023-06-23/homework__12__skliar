@@ -13,7 +13,7 @@ def update_user(request, user_id, new_name, new_number):
         pass
     else:
         phoneuser.phone_number = new_number
-    phoneuser.is_auto_generated = True
+    phoneuser.is_auto_generated = False
     phoneuser.date_update = timezone.now()
     phoneuser.save()
     return render(request, "delete_user.html", {"phoneuser": phoneuser})

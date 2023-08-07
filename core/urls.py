@@ -27,4 +27,7 @@ urlpatterns = [
     path("test/", include("applications.fill_contacts.urls")),
     path("all/", include("applications.fill_contacts.urls")),
     path("one/", include("applications.fill_contacts.urls")),
+    path("add/", include("applications.fill_contacts.urls")),
+    path("delete/", include("applications.fill_contacts.urls")),
+    path("update/", include("applications.fill_contacts.urls")),
 ]

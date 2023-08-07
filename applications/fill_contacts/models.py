@@ -1,7 +1,6 @@
 from django.db import models
 import uuid
 
-
 class PhoneUser(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     is_auto_generated = models.BooleanField(blank=False, default=False)

@@ -125,3 +125,18 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.links a {
+  display: inline-block;
+  margin-right: 20px;
+  color: #666;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #b6b6b6;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}

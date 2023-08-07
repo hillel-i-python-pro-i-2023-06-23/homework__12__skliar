@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h1>Добавление пользователя:</h1>
+
+    <form method="POST">
+    {% csrf_token %}
+        <label for="name">Имя:</label>
+        <input type="text" name="name" required/>
+        <label for="tel_num">Номер телефона:</label>
+        <input type="text" name="tel_num" required/>
+        <button type="submit">Добавить</button>
+    </form>
+        {{ message }}
+
+
+{% endblock %}

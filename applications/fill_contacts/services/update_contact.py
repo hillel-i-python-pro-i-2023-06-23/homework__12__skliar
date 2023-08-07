@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from applications.fill_contacts.models import PhoneUser
 from django.utils import timezone
 
+
 def update_user(request, user_id, new_name, new_number):
     phoneuser = get_object_or_404(PhoneUser, id=user_id)
     if not new_name:

@@ -5,20 +5,23 @@ from .services.delete_contact import delete_user
 from django.shortcuts import render
 from .services.update_contact import update_user
 
+
 def all(request):
     return phoneuser_list(request)
+
 
 def one_user(request):
     if request.method == "POST":
         user_id = request.POST.get("user_id")
         try:
             return view_one(request, user_id=user_id)
-        except Exception as ex:
+        except Exception:
             error_message = "Пользователь с таким ID не найден."
             return render(request, "view_one.html", {"error_message": error_message})
     else:
         # Возвращаем HttpResponse для GET-запроса
         return render(request, "view_one.html")
+
 
 def add_user(request):
     if request.method == "POST":
@@ -28,7 +31,7 @@ def add_user(request):
             add_phone_user(name, phone_number)
             message = "Добавлен"
             return render(request, "add_user.html", {"message": message})
-        except Exception as ex:
+        except Exception:
             message = "НЕ добавлен"
             return render(request, "add_user.html", {"message": message})
     else:
@@ -42,7 +45,7 @@ def delete(request):
             delete_user(request, user_id=user_id)
             message = "Удален"
             return render(request, "delete_user.html", {"message": message})
-        except Exception as ex:
+        except Exception:
             message = "Пользователь с таким ID не найден."
             return render(request, "delete_user.html", {"message": message})
     else:
@@ -59,7 +62,7 @@ def update(request):
             update_user(request, user_id, new_name, new_number)
             message = "Изменен"
             return render(request, "update_user.html", {"message": message})
-        except Exception as ex:
+        except Exception:
             message = "НЕ изменен"
             return render(request, "update_user.html", {"message": message})
     else:

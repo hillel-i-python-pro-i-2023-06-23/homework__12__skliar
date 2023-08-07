@@ -1,8 +1,14 @@
 from django.db import models
 import uuid
 
+
 class PhoneUser(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+    id = models.UUIDField(
+        primary_key=True,
+        default=uuid.uuid4,
+        editable=False,
+        unique=True,
+    )
     is_auto_generated = models.BooleanField(blank=False, default=False)
     name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=20)
@@ -20,5 +26,5 @@ class PhoneUser(models.Model):
 
     __repr__ = __str__
 
-    class Meta:   #для сортировки
+    class Meta:  # для сортировки
         ordering = ["name"]

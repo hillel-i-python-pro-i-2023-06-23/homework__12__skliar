@@ -2,6 +2,14 @@
 
 {% block content %}
     <a href={% url 'test:test' %}>text_List_view</a>
+    <div class="links">
+        <a href="/phoneuser/test">test List view</a>
+        <a href="/phoneuser/all">all contacts</a>
+        <a href="/phoneuser/add">add contact</a>
+        <a href="/phoneuser/one">view contact</a>
+        <a href="/phoneuser/update">update contact</a>
+        <a href="/phoneuser/delete">delete contact</a>
+    </div>
 <h1>Список пользователей с помощью render</h1>
     <ul>
         {% for user in phoneusers %}

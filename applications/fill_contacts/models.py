@@ -14,7 +14,8 @@ class PhoneUser(models.Model):
 
     def __str__(self) -> str:
         return (
-            f"Имя {self.name} "
+            f"ID {self.id} "
+            f"|| Имя {self.name} "
             f"|| номер {self.phone_number} "
             f"|| дата создания {self.date_create} "
             f"|| дата изменения {self.date_update}"
@@ -22,5 +23,5 @@ class PhoneUser(models.Model):
 
     __repr__ = __str__
 
-    class Meta:
+    class Meta:  # для сортировки
         ordering = ["name"]

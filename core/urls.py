@@ -23,6 +23,12 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path("home/", include(("applications.base.urls", "base"))),
     path("create-users/", include(("applications.create_users.urls", "create_users"))),
-    path("phone-user-list/", include(("applications.fill_contacts.urls", "fill_contacts"))),
-    path("phone-user-list/test/", include(("applications.fill_contacts.urlsForListView", "test"))),
+    path(
+        "phone-user-list/",
+        include(("applications.fill_contacts.urls", "fill_contacts")),
+    ),
+    path(
+        "phone-user-list/test/",
+        include(("applications.fill_contacts.urlsForListView", "test")),
+    ),
 ]

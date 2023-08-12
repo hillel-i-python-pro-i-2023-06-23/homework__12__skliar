@@ -3,7 +3,9 @@ import uuid
 
 
 class PhoneUser(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)  # не понял в чем проблема
+    id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False
+    )  # не понял в чем проблема
     is_auto_generated = models.BooleanField(default=False)  # исправил
     name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=20)

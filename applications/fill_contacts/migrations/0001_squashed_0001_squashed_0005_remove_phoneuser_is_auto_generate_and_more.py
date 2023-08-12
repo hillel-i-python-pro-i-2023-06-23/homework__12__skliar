@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
         (
             "fill_contacts",
             "0001_squashed_0005_remove_phoneuser_is_auto_generate_and_more",
-        )
+        ),
     ]
 
     initial = True

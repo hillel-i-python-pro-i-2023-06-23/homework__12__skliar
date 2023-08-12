@@ -23,7 +23,7 @@
       </a>
     </div>
     <nav>
-      <a href="/">
+      <a href="{% url 'base:home' %}">
         <img src="{% static 'icons/house-solid.svg' %}" alt="home Image" width="32" height="32">
       </a>
       <a href="#about">
@@ -36,10 +36,10 @@
   </header>
 
   <section class="menu">
-      <a href="/">Главная</a>
-      <a href="/create-users">DZ_11</a>
-      <a href="/phoneuser">DZ_12</a>
-    </section>
+      <a href="{% url 'base:home' %}">Главная</a>
+      <a href="{% url 'create_users:create-users' %}">DZ_11</a>
+      <a href="{% url 'fill_contacts:phone-user-list' %}">DZ_12</a>
+  </section>
 
 
 <!-- Будем всегда менять -->

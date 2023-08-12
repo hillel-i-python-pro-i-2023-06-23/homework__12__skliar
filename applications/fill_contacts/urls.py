@@ -5,5 +5,5 @@ from . import views
 apps_name = "fill_contacts"
 
 urlpatterns = [
-    path("", views.phoneuser_list, name="phoneuser-list"),
+    path("", views.phoneuser_list, name="phone-user-list"),
 ]

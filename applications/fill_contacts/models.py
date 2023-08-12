@@ -3,8 +3,8 @@ import uuid
 
 
 class PhoneUser(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    is_auto_generated = models.BooleanField(blank=False, default=False)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)  # не понял в чем проблема
+    is_auto_generated = models.BooleanField(default=False)  # исправил
     name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=20)
     date_create = models.DateField(auto_now_add=True, editable=False)

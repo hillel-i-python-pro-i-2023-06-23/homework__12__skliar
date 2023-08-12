@@ -140,7 +140,7 @@ STATIC_URL = "/static/"
 
 # указание папки где лежат статические файлы
 STATICFILES_DIRS = [
-    APPS_DIR / "templates/static",
+    APPS_DIR / "static",
 ]
 
 

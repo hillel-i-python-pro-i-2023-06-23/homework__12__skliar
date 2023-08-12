@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {% block content %}
-    <a href="/test">text_List_view</a>
+    <a href={% url 'test:test' %}>text_List_view</a>
 <h1>Список пользователей с помощью render</h1>
     <ul>
         {% for user in phoneusers %}

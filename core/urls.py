@@ -27,13 +27,4 @@ urlpatterns = [
         "phone-user-list/",
         include(("applications.fill_contacts.urls", "fill_contacts")),
     ),
-    path(
-        "phone-user-list/test/",
-        include(("applications.fill_contacts.urlsForListView", "test")),
-    ),
-    path("all/", include("applications.fill_contacts.urls")),
-    path("one/", include("applications.fill_contacts.urls")),
-    path("add/", include("applications.fill_contacts.urls")),
-    path("delete/", include("applications.fill_contacts.urls")),
-    path("update/", include("applications.fill_contacts.urls")),
 ]

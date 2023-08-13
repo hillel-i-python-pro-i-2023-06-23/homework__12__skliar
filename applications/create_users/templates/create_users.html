@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {% block content %}
-    <form method='GET'>
+    <form method='POST'>
         {% csrf_token %}
         <label for="num_users">Сколько пользователей:</label>
         <input type="number" name="num_users" id="num_users" min="0" required>

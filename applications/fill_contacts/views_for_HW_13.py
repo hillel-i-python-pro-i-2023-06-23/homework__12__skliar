@@ -1,4 +1,3 @@
-# from django.core.exceptions import ObjectDoesNotExist
 from .services.view_all_contacts import phoneuser_list
 from .services.view_one_contact import view_one
 from .services.add_contact import add_phone_user
@@ -8,7 +7,8 @@ from .services.update_contact import update_user
 
 
 def all(request):
-    return phoneuser_list(request)
+    phoneusers = phoneuser_list()
+    return render(request, "view_all.html", {"phoneusers": phoneusers})
 
 
 def one_user(request):

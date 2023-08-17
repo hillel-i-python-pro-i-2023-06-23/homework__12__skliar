@@ -49,6 +49,7 @@ LOCAL_APPS = [
     "applications.base",
     "applications.create_users",
     "applications.fill_contacts",
+    "applications.users"
 ]
 
 THIRD_PARTY_APPS: List[list] = []
@@ -66,6 +67,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "core.urls"
+
+AUTH_USER_MODEL = "users.User"
 
 TEMPLATES = [
     {

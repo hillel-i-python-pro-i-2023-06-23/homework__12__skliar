@@ -21,7 +21,7 @@ from django.urls import path, include
 # from applications.base import views as base_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
     path("", include(("applications.base.urls", "base"))),
     path("create-users/", include(("applications.create_users.urls", "create_users"))),
     path(

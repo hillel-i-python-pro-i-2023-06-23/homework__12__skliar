@@ -49,7 +49,7 @@ LOCAL_APPS = [
     "applications.base",
     "applications.create_users",
     "applications.fill_contacts",
-    "applications.users"
+    "applications.users",
 ]
 
 THIRD_PARTY_APPS: List[list] = []

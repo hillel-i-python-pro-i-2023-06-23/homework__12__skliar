@@ -15,5 +15,9 @@ set -o xtrace
 # Apply database migrations.
 make migrate
 
+make init-dev-i-create-superuser
+
+make generate-phone-users
+
 # Run application.
 python manage.py runserver 0.0.0.0:8000

@@ -1,4 +1,4 @@
-import logging
+# import logging
 
 from django.core.management.base import BaseCommand
 
@@ -19,12 +19,12 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         amount: int = options["amount"]
 
-        logger = logging.getLogger("django")
+        # logger = logging.getLogger("django")
 
         queryset = PhoneUser.objects.all()
-        logger.info(f"Current amount of users before: {queryset.count()}")
+        # logger.info(f"Current amount of users before: {queryset.count()}")
         for user in generate_users(amount=amount):
             user.is_auto_generate = True
             user.save()
-
-        logger.info(f"Current amount of users after: {queryset.count()}")
+        self.stdout.write(self.style.SUCCESS(f"Have {queryset.count()} users"))
+        # logger.info(f"Current amount of users after: {queryset.count()}")

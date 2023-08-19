@@ -66,3 +66,13 @@ migrations:
 # Migrate
 migrate:
 	@python manage.py migrate
+
+.PHONY: init-dev-i-create-superuser
+# Create superuser
+init-dev-i-create-superuser:
+	@python manage.py createadmin
+
+.PHONY: generate-phone-users
+# Generate users
+generate-phone-users:
+	@python manage.py generate-users --amount 11
